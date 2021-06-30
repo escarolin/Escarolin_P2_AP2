@@ -9,16 +9,16 @@ namespace Escarolin_P2_AP2.DAL
 {
     public class Contexto: DbContext
     {
-    
+        public DbSet<Cobros> Cobros { get; set; }
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Ventas> Ventas { get; set; }
-      
+       
 
-        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
             optionsBuilder.UseSqlite(@"Data Source = Data/Cobros.db");
-        }*/
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder) { 
 
   modelBuilder.Entity<Clientes>().HasData(new Clientes() { ClienteId = 1, Nombres = "FERRETERIA GAMA" });
