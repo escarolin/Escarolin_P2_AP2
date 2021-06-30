@@ -11,5 +11,6 @@ namespace Escarolin_P2_AP2.Models
         [Key]
         public int ClienteId { get; set; }
         public string Nombres { get; set; }
+
     }
 }
